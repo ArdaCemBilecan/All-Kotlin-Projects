@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/biltekHaber"
+            android:title="BİLTEK HABER"
+            app:showAsAction="never">
+    </item>
+    <item
+    android:id="@+id/biltekGrup"
+    android:title="GRUP ARKADAŞI ARAMA"
+    app:showAsAction="never">
+    </item>
+
+</menu>

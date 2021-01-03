@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/cardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:srcCompat="@mipmap/ic_launcher_round"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp" android:id="@+id/imgManzara"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvManzaraAciklama" android:layout_marginEnd="8dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="222dp"
+                android:layout_height="32dp"
+                android:id="@+id/tvManzaraBaslik"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/imgManzara"
+                android:fontFamily="sans-serif-black" app:layout_constraintStart_toEndOf="@+id/imgManzara"
+                android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvManzaraAciklama" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imgKopyala" android:layout_marginTop="8dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="240dp"
+                android:layout_height="31dp"
+                android:id="@+id/tvManzaraAciklama"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintTop_toBottomOf="@+id/tvManzaraBaslik"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgManzara"
+                app:layout_constraintStart_toEndOf="@+id/imgManzara" android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/imgSil"/>
+        <TextView
+                android:layout_width="399dp"
+                android:layout_height="3dp"
+                android:id="@+id/tvRenk"
+                app:layout_constraintTop_toBottomOf="@+id/imgManzara"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="4dp" app:layout_constraintHorizontal_bias="0.666"/>
+
+        <ImageView
+                android:id="@+id/imgSil"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:tint="@color/kirmizi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgKopyala"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp" app:srcCompat="@android:drawable/ic_input_add"
+                android:id="@+id/imgKopyala"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/imgSil"
+                android:tint="@color/yeşil"
+                app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

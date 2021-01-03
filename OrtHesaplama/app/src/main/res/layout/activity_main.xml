@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/kotlinbackground"
+tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:id="@+id/etDersAd"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:textStyle="bold"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@android:color/white"
+                android:popupBackground="@color/colorDeneme"
+                android:hint="Ders Adını Giriniz: "
+                android:completionHint=""
+        />
+        <Spinner
+                android:layout_width="182dp"
+                android:layout_height="31dp"
+                android:id="@+id/spnDersNot" android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:popupBackground="@color/colorDeneme"
+                android:textStyle="bold"
+                android:backgroundTint="@color/colorAccent"
+                android:entries="@array/Not"
+                app:layout_constraintTop_toBottomOf="@+id/etDersAd"/>
+        <Spinner
+                android:layout_width="182dp"
+                android:layout_height="31dp"
+                android:id="@+id/spnDersKredi"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/etDersAd"
+                android:entries="@array/Kredi"
+                android:textStyle="bold"
+                android:backgroundTint="@color/colorAccent"
+                app:layout_constraintStart_toEndOf="@+id/spnDersNot"
+                android:popupBackground="@color/colorDeneme"
+                android:layout_marginStart="8dp"/>
+        <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/btnDersEkle"
+                android:background="@drawable/addbutton"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toEndOf="@+id/etDersAd"
+                android:layout_marginStart="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:background="@color/colorAccent">
+    </View>
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="400dp">
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/rootLayout">
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <Button
+            android:layout_width="307dp"
+            android:layout_gravity="center"
+            android:layout_height="140dp"
+            android:id="@+id/btnHesapla"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="ortalamaHesapla"
+            android:background="@drawable/calculate"
+            app:layout_constraintEnd_toEndOf="parent" android:fontFamily="monospace"/>
+
+</LinearLayout>

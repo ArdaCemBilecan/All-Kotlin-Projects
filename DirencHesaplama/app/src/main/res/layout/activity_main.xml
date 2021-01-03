@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvYuzde"
+        android:layout_width="177dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="36dp"
+        android:hint="Yuzde:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="445dp"
+        android:layout_marginBottom="224dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/silindir" />
+
+    <Spinner
+        android:id="@+id/tolerans"
+        android:layout_width="14dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="75dp"
+        android:background="#A4FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/renk2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/renk3"
+        android:layout_width="12dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="75dp"
+        android:background="#A4FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/renk2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/renk2"
+        android:layout_width="12dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="75dp"
+        android:background="#A4FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/renk1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/renk1"
+        android:layout_width="12dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="75dp"
+        android:background="#A4FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSonuc"
+        android:layout_width="234dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="36dp"
+        android:hint="SONUÇ:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btnHesapla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:text="Hesapla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tolerans" />
+</androidx.constraintlayout.widget.ConstraintLayout>
